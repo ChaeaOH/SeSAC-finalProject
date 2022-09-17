@@ -19,7 +19,6 @@ const Profile = () => {
   return (
     <div className="profile-inner">
       <h1 className="profile-title">Profile</h1>
-      {/*       <div className='profile-title'>Profile</div> */}
       <div className="profile-container">
         <div className="profile-img"></div>
         <div className="profile-content">
