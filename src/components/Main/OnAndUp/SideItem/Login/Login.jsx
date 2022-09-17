@@ -16,12 +16,6 @@ const Login = ({ setLoginAuth }) => {
 
   dispatch(setFooterDisplay("off"));
   dispatch(headerGnbOpcity("2"));
-  /*  const loginSubmit = (e) => {
-     // e.preventDefault();
-     console.log('로그인되었습니다.');
-     setLoginAuth(true);
-     navigate('/chemiverseOnUp');
-   } */
   const LoginSearch = () => {
     navigate("/chemiverseOnUp/login-search");
   };
@@ -30,8 +24,6 @@ const Login = ({ setLoginAuth }) => {
     e.preventDefault();
     // 입력을 안 한 경우
     if (id.length === 0 || password.length === 0) {
-      //console.log(error);
-      /* setError(true); */
       alert("아이디와 비밀번호를 입력하세요.");
     }
 
@@ -57,7 +49,6 @@ const Login = ({ setLoginAuth }) => {
     <div className="login-form">
       <div className="login-title">로그인💡</div>
       <form onSubmit={(e) => handleSubmit(e)}>
-        {/*       <form onSubmit={(e) => { login(e) }}> */}
         <div className="login-id">
           <div>
             <input
@@ -84,13 +75,11 @@ const Login = ({ setLoginAuth }) => {
           <button id="searchBtn" onClick={LoginSearch}>
             ID/PW찾기
           </button>
-          {/*   <span>{error ? true : "로그인 정보가 올바르지 않습니다."}</span> */}
         </div>
         <div>
           {error ? (
             <button className="error-button">로그인</button>
           ) : (
-            /*    (<span>로그인 정보가 올바르지 않습니다 </span>) */
             <button className="login-button" type="submit" value="로그인">
               로그인
             </button>
